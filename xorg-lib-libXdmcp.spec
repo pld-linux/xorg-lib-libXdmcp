@@ -17,6 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xproto-devel
+Obsoletes:	libXdmcp
 BuildRoot:	%{tmpdir}/libXdmcp-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -34,6 +35,7 @@ Summary(pl):	Pliki nag³ówkowe do biblioteki libXdmcp
 Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXdmcp = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
+Obsoletes:	libXdmcp-devel
 
 %description devel
 X Display Manager Control Protocol library.
@@ -53,6 +55,7 @@ Summary:	Static libXdmcp libraries
 Summary(pl):	Biblioteki statyczne libXdmcp
 Group:		Development/Libraries
 Requires:	xorg-lib-libXdmcp-devel = %{version}-%{release}
+Obsoletes:	libXdmcp-static
 
 %description static
 X Display Manager Control Protocol library.
