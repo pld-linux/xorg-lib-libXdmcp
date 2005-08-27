@@ -14,7 +14,7 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xproto-devel
 Obsoletes:	libXdmcp
