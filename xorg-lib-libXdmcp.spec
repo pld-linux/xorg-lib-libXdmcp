@@ -1,5 +1,3 @@
-
-#
 Summary:	X Display Manager Control Protocol library
 Summary(pl):	Biblioteka protoko³u XDMCP
 Name:		xorg-lib-libXdmcp
@@ -15,10 +13,10 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
-BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXdmcp
-BuildRoot:	%{tmpdir}/libXdmcp-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -28,12 +26,11 @@ X Display Manager Control Protocol library.
 %description -l pl
 Biblioteka protoko³u XDMCP (X Display Manager Control Protocol).
 
-
 %package devel
 Summary:	Header files libXdmcp development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXdmcp
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXdmcp = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
 Obsoletes:	libXdmcp-devel
 
@@ -49,12 +46,11 @@ Biblioteka protoko³u XDMCP (X Display Manager Control Protocol).
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXdmcp.
 
-
 %package static
-Summary:	Static libXdmcp libraries
-Summary(pl):	Biblioteki statyczne libXdmcp
-Group:		Development/Libraries
-Requires:	xorg-lib-libXdmcp-devel = %{version}-%{release}
+Summary:	Static libXdmcp library
+Summary(pl):	Biblioteka statyczna libXdmcp
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXdmcp-static
 
 %description static
@@ -65,14 +61,12 @@ This package contains the static libXdmcp library.
 %description static -l pl
 Biblioteka protoko³u XDMCP (X Display Manager Control Protocol).
 
-Pakiet zawiera statyczne biblioteki libXdmcp.
-
+Pakiet zawiera statyczn± bibliotekê libXdmcp.
 
 %prep
 %setup -q -n libXdmcp-%{version}
 
 install -m 644 %{SOURCE1} Wraphelp.c
-
 
 %build
 %{__libtoolize}
@@ -96,20 +90,17 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS
-%attr(755,root,wheel) %{_libdir}/libXdmcp.so.*
-
+%attr(755,root,root) %{_libdir}/libXdmcp.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/Xdmcp.h
+%attr(755,root,root) %{_libdir}/libXdmcp.so
 %{_libdir}/libXdmcp.la
-%attr(755,root,wheel) %{_libdir}/libXdmcp.so
+%{_includedir}/X11/Xdmcp.h
 %{_pkgconfigdir}/xdmcp.pc
-
 
 %files static
 %defattr(644,root,root,755)
