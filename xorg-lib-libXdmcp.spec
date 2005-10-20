@@ -90,7 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS
+%doc AUTHORS COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXdmcp.so.*.*.*
 
 %files devel
