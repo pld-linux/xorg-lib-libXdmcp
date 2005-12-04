@@ -25,8 +25,8 @@ X Display Manager Control Protocol library.
 Biblioteka protoko³u XDMCP (X Display Manager Control Protocol).
 
 %package devel
-Summary:	Header files libXdmcp development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXdmcp
+Summary:	Header files for libXdmcp library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXdmcp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -36,7 +36,7 @@ Obsoletes:	libXdmcp-devel
 X Display Manager Control Protocol library.
 
 This package contains the header files needed to develop programs that
-use these libXdmcp.
+use libXdmcp.
 
 %description devel -l pl
 Biblioteka protoko³u XDMCP (X Display Manager Control Protocol).
