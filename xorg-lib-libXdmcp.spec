@@ -1,5 +1,5 @@
 Summary:	X Display Manager Control Protocol library
-Summary(pl):	Biblioteka protoko≥u XDMCP
+Summary(pl.UTF-8):   Biblioteka protoko≈Çu XDMCP
 Name:		xorg-lib-libXdmcp
 Version:	1.0.2
 Release:	4
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Display Manager Control Protocol library.
 
-%description -l pl
-Biblioteka protoko≥u XDMCP (X Display Manager Control Protocol).
+%description -l pl.UTF-8
+Biblioteka protoko≈Çu XDMCP (X Display Manager Control Protocol).
 
 %package devel
 Summary:	Header files for libXdmcp library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libXdmcp
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libXdmcp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -38,15 +38,15 @@ X Display Manager Control Protocol library.
 This package contains the header files needed to develop programs that
 use libXdmcp.
 
-%description devel -l pl
-Biblioteka protoko≥u XDMCP (X Display Manager Control Protocol).
+%description devel -l pl.UTF-8
+Biblioteka protoko≈Çu XDMCP (X Display Manager Control Protocol).
 
-Pakiet zawiera pliki nag≥Ûwkowe niezbÍdne do kompilowania programÛw
-uøywaj±cych biblioteki libXdmcp.
+Pakiet zawiera pliki nag≈Ç√≥wkowe niezbƒôdne do kompilowania program√≥w
+u≈ºywajƒÖcych biblioteki libXdmcp.
 
 %package static
 Summary:	Static libXdmcp library
-Summary(pl):	Biblioteka statyczna libXdmcp
+Summary(pl.UTF-8):   Biblioteka statyczna libXdmcp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXdmcp-static
@@ -56,10 +56,10 @@ X Display Manager Control Protocol library.
 
 This package contains the static libXdmcp library.
 
-%description static -l pl
-Biblioteka protoko≥u XDMCP (X Display Manager Control Protocol).
+%description static -l pl.UTF-8
+Biblioteka protoko≈Çu XDMCP (X Display Manager Control Protocol).
 
-Pakiet zawiera statyczn± bibliotekÍ libXdmcp.
+Pakiet zawiera statycznƒÖ bibliotekƒô libXdmcp.
 
 %prep
 %setup -q -n libXdmcp-%{version}
