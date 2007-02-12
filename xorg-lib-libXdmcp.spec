@@ -1,5 +1,5 @@
 Summary:	X Display Manager Control Protocol library
-Summary(pl.UTF-8):   Biblioteka protokołu XDMCP
+Summary(pl.UTF-8):	Biblioteka protokołu XDMCP
 Name:		xorg-lib-libXdmcp
 Version:	1.0.2
 Release:	4
@@ -26,7 +26,7 @@ Biblioteka protokołu XDMCP (X Display Manager Control Protocol).
 
 %package devel
 Summary:	Header files for libXdmcp library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXdmcp
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXdmcp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -46,7 +46,7 @@ używających biblioteki libXdmcp.
 
 %package static
 Summary:	Static libXdmcp library
-Summary(pl.UTF-8):   Biblioteka statyczna libXdmcp
+Summary(pl.UTF-8):	Biblioteka statyczna libXdmcp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXdmcp-static
