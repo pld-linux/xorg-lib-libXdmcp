@@ -2,7 +2,7 @@ Summary:	X Display Manager Control Protocol library
 Summary(pl.UTF-8):	Biblioteka protokołu XDMCP
 Name:		xorg-lib-libXdmcp
 Version:	1.0.2
-Release:	4
+Release:	5
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXdmcp-%{version}.tar.bz2
