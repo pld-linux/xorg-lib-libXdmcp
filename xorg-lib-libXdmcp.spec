@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-xproto-devel
-BuildRequires:	xorg-util-util-macros >= 1.1.0
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	libXdmcp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -87,8 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog
+%doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXdmcp.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXdmcp.so.6
 
 %files devel
 %defattr(644,root,root,755)
