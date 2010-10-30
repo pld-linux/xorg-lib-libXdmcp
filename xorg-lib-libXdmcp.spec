@@ -1,19 +1,21 @@
 Summary:	X Display Manager Control Protocol library
 Summary(pl.UTF-8):	Biblioteka protokołu XDMCP
 Name:		xorg-lib-libXdmcp
-Version:	1.0.3
+Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXdmcp-%{version}.tar.bz2
-# Source0-md5:	d60941d471800f41a3f19b24bea855a7
+# Source0-md5:	762b6bbaff7b7d0831ddb4f072f939a5
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xmlto >= 0.0.20
 BuildRequires:	xorg-proto-xproto-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-sgml-doctools >= 1.5
+BuildRequires:	xorg-util-util-macros >= 1.10
 Obsoletes:	libXdmcp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -76,8 +78,7 @@ Pakiet zawiera statyczną bibliotekę libXdmcp.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -93,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%doc doc/*.{html,css}
 %attr(755,root,root) %{_libdir}/libXdmcp.so
 %{_libdir}/libXdmcp.la
 %{_includedir}/X11/Xdmcp.h
