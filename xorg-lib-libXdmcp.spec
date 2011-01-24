@@ -10,6 +10,7 @@ Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXdmcp-%{version}
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
+BuildRequires:	docbook-dtd43-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xmlto >= 0.0.20
