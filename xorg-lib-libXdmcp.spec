@@ -5,27 +5,29 @@
 Summary:	X Display Manager Control Protocol library
 Summary(pl.UTF-8):	Biblioteka protokołu XDMCP
 Name:		xorg-lib-libXdmcp
-Version:	1.1.3
-Release:	2
+Version:	1.1.4
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXdmcp-%{version}.tar.bz2
-# Source0-md5:	115c5c12ecce0e749cd91d999a5fd160
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXdmcp-%{version}.tar.xz
+# Source0-md5:	0b4056a282c1e14323d5daef8fb5345d
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd43-xml
 %{!?with_libbsd:BuildRequires:	glibc-devel >= 6:2.25}
-%{?with_libbsd:BuildRequires:	libbsd-devel}
+%{?with_libbsd:BuildRequires:	libbsd-devel >= 0.3.0}
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-sgml-doctools >= 1.8
 BuildRequires:	xorg-util-util-macros >= 1.16
+BuildRequires:	xz
 # getentropy() requires Linux 3.17+ (to avoid CVE-2017-2625 when building without libbsd)
 %{!?with_libbsd:Requires:	uname(release) >= 3.17}
-Obsoletes:	libXdmcp
+Obsoletes:	libXdmcp < 1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,9 +41,9 @@ Summary:	Header files for libXdmcp library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXdmcp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-%{?with_libbsd:Requires:	libbsd-devel}
+%{?with_libbsd:Requires:	libbsd-devel >= 0.3.0}
 Requires:	xorg-proto-xproto-devel
-Obsoletes:	libXdmcp-devel
+Obsoletes:	libXdmcp-devel < 1
 
 %description devel
 X Display Manager Control Protocol library.
@@ -60,7 +62,7 @@ Summary:	Static libXdmcp library
 Summary(pl.UTF-8):	Biblioteka statyczna libXdmcp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXdmcp-static
+Obsoletes:	libXdmcp-static < 1
 
 %description static
 X Display Manager Control Protocol library.
